@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '/modules/login/login_controller.dart';
 import '../../shared/themes/themes.dart';
 import '../../shared/widgets/social_login_button/google_login_button.dart';
 
@@ -11,6 +12,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final controller = LoginController();
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
@@ -54,7 +57,9 @@ class _LoginPageState extends State<LoginPage> {
                   Padding(
                     padding: const EdgeInsets.all(40),
                     child: GoogleLoginButton(
-                      onTap: () {},
+                      onTap: () {
+                        controller.googleSignIn(context);
+                      },
                     ),
                   ),
                 ],

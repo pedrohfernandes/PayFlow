@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "340207508571-oc8v4bs9n7nhg08bb76uiqun7s8b5n78.apps.googleusercontent.com",
+          "client_id": "340207508571-jbt2g6tnpvgfm67vug3cesgkpct6s6n9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.pedrohfernandes.payflow",
+            "certificate_hash": "772393b403927dedf41162660972e3d8deef86be"
+          }
+        },
+        {
+          "client_id": "340207508571-1c67eqohi3hp8n0a6gpg535eq4v6b8a5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +35,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "340207508571-oc8v4bs9n7nhg08bb76uiqun7s8b5n78.apps.googleusercontent.com",
+              "client_id": "340207508571-1c67eqohi3hp8n0a6gpg535eq4v6b8a5.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "340207508571-im3pplapn7h838n8b91dn9ji4nehao6j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.pedrohfernandes.payflow"
+              }
             }
           ]
         }
