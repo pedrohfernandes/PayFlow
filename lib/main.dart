@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 
-import 'modules/barcode_scanner/barcode_scanner_page.dart';
-import 'modules/splash/splash_page.dart';
-import 'modules/home/home_page.dart';
-import 'modules/login/login_page.dart';
-import 'shared/themes/themes.dart';
+import 'firebase_options.dart';
+import 'app_widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,26 +10,4 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const AppWidget());
-}
-
-class AppWidget extends StatelessWidget {
-  const AppWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Pay Flow",
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-        primaryColor: AppColors.primary,
-      ),
-      initialRoute: "/splash",
-      routes: {
-        "/splash": (context) => SplashPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
-        "/barcode_scanner": (context) => BarcodeScannerPage(),
-      },
-    );
-  }
 }
