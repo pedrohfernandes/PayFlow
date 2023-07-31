@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/modules/home/home_controller.dart';
 
+import '/modules/home/home_controller.dart';
 import '/shared/themes/themes.dart';
 
 class HomePage extends StatefulWidget {
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
               ),
               GestureDetector(
                 onTap: () {
-                  print("clicou");
+                  Navigator.pushNamed(context, "/barcode_scanner");
                 },
                 child: Container(
                   width: 56,
