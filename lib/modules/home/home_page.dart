@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:payflow/shared/widgets/boleto_list/boleto_list_widget.dart';
 
+import '/modules/meus_boletos/meus_boletos_page.dart';
 import '/modules/home/home_controller.dart';
 import '/shared/themes/themes.dart';
 
@@ -15,10 +15,7 @@ class _HomePageState extends State<HomePage> {
   final controller = HomeController();
 
   final pages = [
-    Container(
-      color: Colors.blue,
-      child: BoletoListWidget(),
-    ),
+    MeusBoletosPage(),
     Container(color: Colors.red),
   ];
 

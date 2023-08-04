@@ -4,19 +4,22 @@ import 'package:payflow/shared/widgets/boleto_list/boleto_list_controller.dart';
 import '../boleto_tile/boleto_tile_widget.dart';
 
 class BoletoListWidget extends StatefulWidget {
-  const BoletoListWidget({super.key});
+  final BoletoListController controller;
+
+  const BoletoListWidget({
+    super.key,
+    required this.controller,
+  });
 
   @override
   State<BoletoListWidget> createState() => _BoletoListWidgetState();
 }
 
 class _BoletoListWidgetState extends State<BoletoListWidget> {
-  final controller = BoletoListController();
-
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: controller.boletosNotifier,
+      valueListenable: widget.controller.boletosNotifier,
       builder: (_, boletos, __) => Column(
         children: boletos.map((e) => BoletoTileWidget(data: e)).toList(),
       ),
