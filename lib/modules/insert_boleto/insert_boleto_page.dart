@@ -114,8 +114,10 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
         },
         secondaryLabel: "Cadastrar",
         secondaryOnPressed: () async {
-          await controller.cadastrarBoleto();
-          Navigator.pop(context);
+          final bool boletoCadastrado = await controller.cadastrarBoleto();
+          if (boletoCadastrado) {
+            Navigator.pop(context);
+          }
         },
         enableSecondaryColor: true,
       ),
